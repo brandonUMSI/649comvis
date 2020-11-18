@@ -18,9 +18,7 @@ com_data=pd.read_csv(datasetURL,encoding="latin-1")
 alt.themes.enable('fivethirtyeight')
 
 
-#Sidebar
-side_options = ['page1', 'page2']
-side_select = st.sidebar.selectbox(label="Select a Visualization to Display!", options = side_options)
+
 
 ###### Making of all the charts
 
