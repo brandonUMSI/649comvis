@@ -273,8 +273,8 @@ c1 = chart1.encode(
     color=alt.condition(alt.datum.Rank <= selector2.OlympicRanking,alt.Color("HDI_INT:Q",title="HDI"),alt.value("gray")),
     tooltip=['Country', alt.Tooltip('Happiness Rank National', title='Universal Happiness Rank'),alt.Tooltip('Rank', title='2018 Olympic Ranking'),'Gold','Silver','Bronze']
 ).add_selection(selector,selector2).properties(
-    width=300,
-    height=300
+    width=275,
+    height=275
 ).interactive()
 
 c2 = chart2.encode(
@@ -282,8 +282,8 @@ c2 = chart2.encode(
     color=alt.condition(alt.datum.Rank <= selector2.OlympicRanking,alt.Color("HDI_INT:Q",title="HDI"),alt.value("gray")),
     tooltip=['Country', alt.Tooltip('GNI', title='Gross National Income Per Capita'),alt.Tooltip('Rank', title='2018 Olympic Ranking'),'Gold','Silver','Bronze']
 ).add_selection(selector,selector2).properties(
-    width=300,
-    height=300
+    width=275,
+    height=275
 ).interactive()
 
 c3 = chart3.encode(
@@ -291,8 +291,8 @@ c3 = chart3.encode(
     color=alt.condition(alt.datum.Rank <= selector2.OlympicRanking,alt.Color("HDI_INT:Q",title="HDI"),alt.value("gray")),
     tooltip=['Country', alt.Tooltip('GINI', title='GINI Coeffecient'),alt.Tooltip('Rank', title='2018 Olympic Ranking'),'Gold','Silver','Bronze']
 ).add_selection(selector,selector2).properties(
-    width=300,
-    height=300
+    width=275,
+    height=275
 ).interactive()
 
 c4 = chart4.encode(
@@ -300,8 +300,8 @@ c4 = chart4.encode(
     color=alt.condition(alt.datum.Rank <= selector2.OlympicRanking,alt.Color("HDI_INT:Q",title="HDI"),alt.value("gray")),
     tooltip=['Country', 'Life Expectancy',alt.Tooltip('Rank', title='2018 Olympic Ranking'),'Gold','Silver','Bronze']
 ).add_selection(selector,selector2).properties(
-    width=300,
-    height=300
+    width=275,
+    height=275
 ).interactive()
 
 page2=((c1 | c2) & (c3 | c4)).properties(title="Quality Life, Quality Score",)
