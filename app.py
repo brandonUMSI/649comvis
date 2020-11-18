@@ -312,14 +312,29 @@ page2=((c1 | c2) & (c3 | c4)).properties(title="Quality Life, Quality Score",)
 
 ##### Display graphs
 
-if side_select == 'page1':
-    page1
-    st.write("Use the side options to select the next visualizations")
+page1 
 
-elif side_select == 'page2':
-    st.write("Use the side options to select the next visualizations")
-   
-    page2
+
+st.write("When we take a look at the goings-on at Norway and many of the other top scoring countries in the 2018 Winter Olympics, we start to see that there may be more to a Country’s success than size and influence.")
+
+st.write("Norway has the highest human development index score in the world. This metric is generally considered as an indicator of a country’s quality of life and consists of a variety of factors, life expectancy, per capita income, and education to name a few. Seeing that many of the county’s on our top Olympic scorers list, we might assume that there is a correlation between a country’s quality of life and its ability to perform well in the Olympics. Below are a few visualizations to tell the story:")
+
+
+st.subheader("Happinness")
+st.write("The World Happiness Report is an organization that annually surveys countries and cities to collect self reported metrics of happiness.")
+
+
+st.subheader("GNI")
+st.write("Gross National Income (GNI) is the total amount of money earned by the people and businesses within a country. This metric is seen, by some, as a better indicator of a nation’s wealth than GDP. GNI per capita factors in a nation's population size into their national income.")
+
+st.subheader("GINI Index")
+st.write("Is a measure of the distribution of wealth across a nation’s population. This metric is often used to gauge a country’s level of income inequality where 0 is perfectly equal distribution and 1 is completely unequal.")
+
+st.subheader("Life Expectancy")
+st.write("Life expectancy is a metric for gauging the health of a nation’s population. This metric factors in mortality along a population's entire course of life.")
+
+
+page2
 
 
 
