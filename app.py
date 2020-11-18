@@ -206,28 +206,28 @@ page1 = (vis1 | btmvis).properties(title="2018 Winter Olympics").configure_view(
 ########Vis 2
 
 chart1 = alt.Chart(com_data).mark_point().encode(
-    y = alt.Y('Happiness Rank National:O',title="Happiness Rank",axis=alt.Axis(tickCount=5)),
+    y = alt.Y('Happiness Rank National:O',title="Happiness Rank",axis=alt.Axis(grid = False)),
     x = alt.X('Total:Q',title="Total Medals Won"),   
 ).properties(
     title="Happiness",
 )
 
 chart2 = alt.Chart(com_data).mark_point().encode(
-    y = alt.Y('GNI:O',title="GNI Per Capita",axis=alt.Axis(tickCount=5),sort=alt.EncodingSortField(field='GNI', order='descending')),
+    y = alt.Y('GNI:O',title="GNI Per Capita",sort=alt.EncodingSortField(field='GNI', order='descending'),axis=alt.Axis(grid=False)),
     x = alt.X('Total:Q',title="Total Medals Won"),   
 ).properties(
     title="Income",
 )
 
 chart3 = alt.Chart(com_data).mark_point().encode(
-    y = alt.Y('GINI:O',axis=alt.Axis(tickCount=5),title="GINI (lower is better)"),
+    y = alt.Y('GINI:O',title="GINI (lower is better)",axis=alt.Axis(grid=False)),
     x = alt.X('Total:Q',title="Total Medals Won"),      
 ).properties(
     title="Wealth Equality",
 )
 
 chart4 = alt.Chart(com_data).mark_point().encode(
-    y = alt.Y('Life Expectancy:O',axis=alt.Axis(tickCount=5),title="Life Expectancy",sort=alt.EncodingSortField(field='Life Expectancy', order='descending')),
+    y = alt.Y('Life Expectancy:O',title="Life Expectancy",sort=alt.EncodingSortField(field='Life Expectancy', order='descending'),axis=alt.Axis(grid=False)),
     x = alt.X('Total:Q',title="Total Medals Won"),
       
 ).properties(
