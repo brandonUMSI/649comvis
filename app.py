@@ -16,14 +16,14 @@ import pprint
 st.title("Does Size Really Matter")
 st.write("Norway, the seemingly inconspicuoius country, actually crushed the  2018 Winter Olympics! Despite it's size, Norway is consistently a top contender in the Olympics exceeding even the largest and most competitive nation. Bellow, we'll talk about some of Norway's other leading qualities and what really matters when it comes to Olympic success.")
 
-st.title("Here's a [Link to Blog Page](https://brandonumsi.github.io/649comvis/Brandon%20Sapp%20Communicative%20Visualization%20-%20Interactive.pdf)")
-st.title("Click link to access [instructional Video]()")
-st.title("Click link to access Code [instructional Video]()")
+st.write("Here's a [Link to Blog Page](https://brandonumsi.github.io/649comvis/Brandon%20Sapp%20Communicative%20Visualization%20-%20Interactive.pdf)")
+st.write("Click link to access [instructional Video]()")
+st.write("Click link to access Code [instructional Video]()")
 
-video_file = open('myvideo.mp4', 'rb')
-video_bytes = video_file.read()
+#video_file = open('myvideo.mp4', 'rb')
+#video_bytes = video_file.read()
 
-st.video(video_bytes)
+#st.video(video_bytes)
 #Import data
 datasetURL="https://raw.githubusercontent.com/brandonUMSI/si649/main/static.csv" 
 com_data=pd.read_csv(datasetURL,encoding="latin-1")
