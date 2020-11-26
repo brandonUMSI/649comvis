@@ -4,7 +4,7 @@
 # This app was made using altair, streamlit and python and is deployed on heroku. 
 #Run this app using streamlint or by going to https://si649.herokuapp.com/
 
-# imports we will use
+
 import altair as alt
 import pandas as pd
 import streamlit as st
@@ -16,14 +16,19 @@ import pprint
 st.title("Does Size Really Matter")
 st.write("Norway, the seemingly inconspicuoius country, actually crushed the  2018 Winter Olympics! Despite it's size, Norway is consistently a top contender in the Olympics exceeding even the largest and most competitive nation. Bellow, we'll talk about some of Norway's other leading qualities and what really matters when it comes to Olympic success.")
 
-st.write("Here's a [Link to Blog Page](https://brandonumsi.github.io/649comvis/Brandon%20Sapp%20Communicative%20Visualization%20-%20Interactive.pdf)")
-st.write("Click link to access [instructional Video]()")
-st.write("Click link to access Code [instructional Video]()")
+#blog 
+st.write("Here's a [Link to Blog Page!](https://brandonumsi.github.io/649comvis/Brandon%20Sapp%20Communicative%20Visualization%20-%20Interactive.pdf)")
 
+#code 
+st.write("Here is a link to [the code](https://drive.google.com/file/d/1CtkXPz89BYBhcqieku4Pxb30_zxgC0NK/view?usp=sharing)")
+
+#video 
+st.subheader("Instructional Video")
 video_file = open('comvis.mov', 'rb')
 video_bytes = video_file.read()
-
 st.video(video_bytes)
+
+
 #Import data
 datasetURL="https://raw.githubusercontent.com/brandonUMSI/si649/main/static.csv" 
 com_data=pd.read_csv(datasetURL,encoding="latin-1")
