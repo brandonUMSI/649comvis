@@ -1,5 +1,8 @@
 # Your Name Brandon Sapp
-# si649f20 altair transforms 2
+# si649f20 Communicative Vusualization - Interactive 
+
+# This app was made using altair, streamlit and python and is deployed on heroku. 
+#Run this app using streamlint or by going to https://si649.herokuapp.com/
 
 # imports we will use
 import altair as alt
@@ -12,6 +15,15 @@ import pprint
 #Title
 st.title("Does Size Really Matter")
 st.write("Norway, the seemingly inconspicuoius country, actually crushed the  2018 Winter Olympics! Despite it's size, Norway is consistently a top contender in the Olympics exceeding even the largest and most competitive nation. Bellow, we'll talk about some of Norway's other leading qualities and what really matters when it comes to Olympic success.")
+
+st.title("Here's a [Link to Blog Page](https://brandonumsi.github.io/649comvis/Brandon%20Sapp%20Communicative%20Visualization%20-%20Interactive.pdf)")
+st.title("Click link to access [instructional Video]()")
+st.title("Click link to access Code [instructional Video]()")
+
+video_file = open('myvideo.mp4', 'rb')
+video_bytes = video_file.read()
+
+st.video(video_bytes)
 #Import data
 datasetURL="https://raw.githubusercontent.com/brandonUMSI/si649/main/static.csv" 
 com_data=pd.read_csv(datasetURL,encoding="latin-1")
@@ -20,7 +32,7 @@ alt.themes.enable('fivethirtyeight')
 
 
 
-###### Making of all the charts
+
 
 
 ########Vis 1
@@ -88,7 +100,7 @@ all_text = vis1text + vis1_rule
 vis1 = (all_text|vis1chart + nicon)
 
 
-
+########Vis 1b
 vis2_hover = alt.selection_single(on='mouseover', empty='none', encodings=['x'])
 vis2_hoverNear = alt.selection_single(on='mouseover', empty='none', nearest=True, encodings=['x'])
 vis2_zoom = alt.selection_interval(bind='scales', encodings=['x'])
@@ -200,7 +212,7 @@ btmvis = (vis2b & vis2 & vis2c).properties(
 )
 
 
-page1 = (vis1 | btmvis).properties(title="2018 Winter Olympics").configure_view(strokeWidth=0)
+part1 = (vis1 | btmvis).properties(title="2018 Winter Olympics").configure_view(strokeWidth=0)
 
 
 ########Vis 2
@@ -304,13 +316,13 @@ c4 = chart4.encode(
     height=275
 ).interactive()
 
-page2=((c1 | c2) & (c3 | c4)).properties(title="Quality Life, Quality Score",)
+part2=((c1 | c2) & (c3 | c4)).properties(title="Quality Life, Quality Score",)
 
 
 
 ##### Display graphs
 
-page1 
+part1 
 
 
 st.write("When we take a look at the goings-on at Norway and many of the other top scoring countries in the 2018 Winter Olympics, we start to see that there may be more to a Country’s success than size and influence.")
@@ -332,7 +344,7 @@ st.subheader("Life Expectancy")
 st.write("Life expectancy is a metric for gauging the health of a nation’s population. This metric factors in mortality along a population's entire course of life.")
 
 
-page2
+part2
 
 
 
