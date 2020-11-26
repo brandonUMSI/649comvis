@@ -20,7 +20,7 @@ st.write("Here's a [Link to Blog Page](https://brandonumsi.github.io/649comvis/B
 st.write("Click link to access [instructional Video]()")
 st.write("Click link to access Code [instructional Video]()")
 
-video_file = open('https://drive.google.com/file/d/1UEr0QYiZZ0wXsvrmSInI4CdaPuOSmsZm/view?usp=sharing', 'rb')
+video_file = open('comvis.mov', 'rb')
 video_bytes = video_file.read()
 
 st.video(video_bytes)
